@@ -1,0 +1,13 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "inventory-service"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket"
+s3_prefix = "inventory-service"
+region = "us-east-1"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Stage=\"dev\""
+confirm_changeset = true
+resolve_s3 = true
+image_repositories = []
