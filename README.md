@@ -160,8 +160,8 @@ You can interact with the system using queries like:
 "Add 2 shirts and remove 1 pant"
 "+5 t-shirts, -3 pants"
 
-![Chat Output Result](./images/Inventory Chat 1.png)
+![Chat Output Result](https://github.com/shereenjohn/inventory-management-system/blob/main/images/Inventory%20Chat%201.png)
 
-![Chat Output Result](./images/Inventory Chat 2.png)
+![Chat Output Result](https://github.com/shereenjohn/inventory-management-system/blob/main/images/Inventory%20Chat%202.png)
 
-![Chat Output Result](./images/Inventory Chat 3.png)
+![Chat Output Result](https://github.com/shereenjohn/inventory-management-system/blob/main/images/Inventory%20Chat%203.png)
