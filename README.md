@@ -29,6 +29,33 @@ A natural language-powered inventory management system that lets you interact wi
 - pydantic for data validation
 - gradio (for optional UI)
 
+## 🛠️ Technologies Used
+
+- **Backend**: Python 3.9+, FastAPI, AWS Lambda, AWS API Gateway, AWS SAM
+- **Natural Language Processing**: OpenAI GPT-3.5, Regular Expressions
+- **API & Documentation**: OpenAPI 3.0, YAML
+- **Development Tools**: httpx, pydantic, python-dotenv, uvicorn, gradio
+
+---
+
+## 🧠 Design Approach
+
+- **Serverless Architecture**: For scalability and cost-efficiency.
+- **Singleton Pattern**: For in-memory data storage as required by the project.
+- **Hybrid NLP Approach**: Regex for common queries and OpenAI GPT for complex phrasings.
+- **Clarification System**: Handles ambiguous queries.
+- **OpenAPI Integration**: For dynamic API discovery and specification.
+- **Modular Design**: Separation of concerns with dedicated modules.
+
+---
+
+## 📝 Limitations & Future Improvements
+
+- **Data Persistence**: Currently uses in-memory storage; could be extended with a database like DynamoDB.
+- **Limited Items**: Only tracks t-shirts and pants as specified; can be expanded.
+- **Authentication**: Basic implementation that could be enhanced for production use.
+- **Testing**: Could be expanded with comprehensive unit and integration tests.
+
 ## 📦 Installation & Setup
 
 ### Step 1: Clone the Repository
@@ -114,33 +141,3 @@ curl -X POST -H "Content-Type: application/json" \
 curl -X POST -H "Content-Type: application/json" \
   -d '{"text":"Add 3 shirts and remove 2 pants"}' http://localhost:8001/query
 
-
-
----
-
-## 🛠️ Technologies Used
-
--   **Backend**: Python 3.9+, FastAPI, AWS Lambda, AWS API Gateway, AWS SAM
--   **Natural Language Processing**: OpenAI GPT-3.5, Regular Expressions
--   **API & Documentation**: OpenAPI 3.0, YAML
--   **Development Tools**: httpx, pydantic, python-dotenv, uvicorn, gradio
-
----
-
-## 🧠 Design Approach
-
--   **Serverless Architecture**: For scalability and cost-efficiency.
--   **Singleton Pattern**: For in-memory data storage as required by the project.
--   **Hybrid NLP Approach**: Regex for common queries and OpenAI GPT for complex phrasings.
--   **Clarification System**: Handles ambiguous queries.
--   **OpenAPI Integration**: For dynamic API discovery and specification.
--   **Modular Design**: Separation of concerns with dedicated modules.
-
----
-
-## 📝 Limitations & Future Improvements
-
--   **Data Persistence**: Currently uses in-memory storage; could be extended with a database like DynamoDB.
--   **Limited Items**: Only tracks t-shirts and pants as specified; can be expanded.
--   **Authentication**: Basic implementation that could be enhanced for production use.
--   **Testing**: Could be expanded with comprehensive unit and integration tests.
