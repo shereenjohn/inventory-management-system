@@ -83,19 +83,32 @@ inventory-management-system/
 
 ## 📦 Installation & Setup
 
+### Prerequisites
+
+Before starting, ensure you have the following installed:
+- Python 3.9+
+- [AWS CLI](https://aws.amazon.com/cli/) (configured with your credentials)
+- [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
+- An OpenAI API key
+
 ### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/shereenjohn/inventory-management-system.git
 cd inventory-management-system
-Step 2: Deploy the Inventory Service
-bashcd inventory-service
+```
+### Step 2: Deploy the Inventory Service
+```bash
+cd inventory-service
 
 # Build the SAM application
+
 sam build
 
 # Deploy to AWS
+
 sam deploy --guided
+```
 Follow the prompts during guided deployment:
 
 Stack Name: inventory-service
@@ -104,8 +117,10 @@ Confirm changes before deployment: Y
 Allow SAM CLI to create IAM roles: Y
 
 Important: Note the API endpoint URL from the deployment output. You'll need this for the MCP server.
-Step 3: Set Up the MCP Server
-bashcd ../mcp-server
+
+### Step 3: Set Up the MCP Server
+```bash
+cd ../mcp-server
 
 # Install dependencies
 pip install -r requirements.txt
@@ -125,13 +140,17 @@ echo "AWS_REGION=us-east-1" >> .env
 
 # Start the server
 python run.py
-Step 4: Start the UI (Optional)
-bash# In a separate terminal
+```
+### Step 4: Start the UI 
+```bash
+# In a separate terminal
 cd mcp-server
 python ui.py
 
 # Access UI at http://localhost:7860
+```
 🖥️ Usage Examples
+
 Natural Language Queries
 You can interact with the system using queries like:
 
@@ -141,4 +160,8 @@ You can interact with the system using queries like:
 "Add 2 shirts and remove 1 pant"
 "+5 t-shirts, -3 pants"
 
+![Chat Output Result](./images/Inventory Chat 1.png)
 
+![Chat Output Result](./images/Inventory Chat 2.png)
+
+![Chat Output Result](./images/Inventory Chat 3.png)
