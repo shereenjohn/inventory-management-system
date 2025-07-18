@@ -116,28 +116,4 @@ You can interact with the system using queries like:
 "Add 2 shirts and remove 1 pant"
 "+5 t-shirts, -3 pants"
 
-API Examples
-Inventory Service
-bash# Check inventory
-curl -X GET https://your-api-url
-
-# Update inventory (add 5 t-shirts)
-curl -X POST -H "Content-Type: application/json" \
-  -d '{"item":"tshirts","change":5}' https://your-api-url
-
-# Update inventory (remove 3 pants)
-curl -X POST -H "Content-Type: application/json" \
-  -d '{"item":"pants","change":-3}' https://your-api-url
-MCP Server
-bash# Check current inventory
-curl -X POST -H "Content-Type: application/json" \
-  -d '{"text":"How many shirts do we have?"}' http://localhost:8001/query
-
-# Add items
-curl -X POST -H "Content-Type: application/json" \
-  -d '{"text":"Add 5 shirts to inventory"}' http://localhost:8001/query
-
-# Multiple operations
-curl -X POST -H "Content-Type: application/json" \
-  -d '{"text":"Add 3 shirts and remove 2 pants"}' http://localhost:8001/query
 
