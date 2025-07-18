@@ -112,8 +112,11 @@ sam deploy --guided
 Follow the prompts during guided deployment:
 
 Stack Name: inventory-service
+
 AWS Region: Your preferred region
+
 Confirm changes before deployment: Y
+
 Allow SAM CLI to create IAM roles: Y
 
 Important: Note the API endpoint URL from the deployment output. You'll need this for the MCP server.
@@ -155,10 +158,15 @@ Natural Language Queries
 You can interact with the system using queries like:
 
 "What is in the inventory?"
+
 "Add 5 pants"
+
 "sold 3 shirts"
+
 "Add 2 shirts and remove 1 pant"
+
 "+5 t-shirts, -3 pants"
+
 
 ![Chat Output Result](https://github.com/shereenjohn/inventory-management-system/blob/main/images/Inventory%20Chat%201.png)
 
