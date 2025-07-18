@@ -2,7 +2,6 @@
 
 A natural language-powered inventory management system that lets you interact with inventory data using plain English. The system consists of two main components: an Inventory Service (AWS Lambda) and a Model Control Plane (MCP) Server that processes natural language.
 
-
 ---
 
 ## ✨ Key Features
@@ -16,6 +15,32 @@ A natural language-powered inventory management system that lets you interact wi
 - **Error Handling**: Gracefully manages edge cases like insufficient inventory.
 - **OpenAPI Integration**: Dynamic API discovery and specification.
 
+## 🏗️ Project Structure
+```
+inventory-management-system/
+├── inventory-service/              # Serverless inventory API
+│   ├── src/inventory/app.py        # Lambda function handler
+│   ├── template.yaml               # SAM template
+│   ├── samconfig.toml              # SAM configuration
+│   └── openapi.yaml                # API specification
+│
+├── mcp-server/                     # Natural language processor
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py                 # FastAPI application
+│   │   ├── inventory.py            # Inventory client
+│   │   ├── llm_service.py          # OpenAI integration
+│   │   ├── openapi_parser.py       # OpenAPI spec parser
+│   │   ├── auth.py                 # Authentication handling
+│   │   └── utils.py                # Utility functions
+│   ├── run.py                      # Server startup
+│   ├── ui.py                       # Gradio UI for demo
+│   ├── requirements.txt            # Python dependencies
+│   └── openapi.yaml                # Copy of API specification
+│
+├── openapi.yaml                    # API specification
+└── README.md                       # Project documentation
+```
 
 ## 📋 Requirements
 
